@@ -41,49 +41,20 @@ console.log(cardsList)
 console.log('poorna')
 
 const App = () => (
-  <div className="main">
-    <h1>Learn 4.0 Technologies</h1>
-    <p>
-      Get trained by alumni of IITs and top companies like
-      Amazon,Microsoft,Intel,Nvidia,Qualcomm,etc. Learn directly from
-      professionals involved in Product Development
-    </p>
-    <ul className="c1">
-      <div className="r1">
-        <CardItem
-          key={cardsList[0].id}
-          title={cardsList[0].title}
-          description={cardsList[0].description}
-          imgUrl={cardsList[0].imgUrl}
-          className={cardsList[0].className}
-        />
-        <CardItem
-          key={cardsList[1].id}
-          title={cardsList[1].title}
-          description={cardsList[1].description}
-          imgUrl={cardsList[1].imgUrl}
-          className={cardsList[1].className}
-        />
-      </div>
-
-      <div className="r1">
-        <CardItem
-          key={cardsList[2].id}
-          title={cardsList[2].title}
-          description={cardsList[2].description}
-          imgUrl={cardsList[2].imgUrl}
-          className={cardsList[2].className}
-        />
-
-        <CardItem
-          key={cardsList[3].id}
-          title={cardsList[3].title}
-          description={cardsList[3].description}
-          imgUrl={cardsList[3].imgUrl}
-          className={cardsList[3].className}
-        />
-      </div>
-    </ul>
+  <div className="cards-app-container">
+    <div className="cards-list-container">
+      <h1 className="heading">Learn 4.0 Technologies</h1>
+      <p className="description">
+        Get trained by alumni of IITs and top companies like Amazon, Microsoft,
+        Intel, Nvidia, Qualcomm, etc. Learn directly from professionals involved
+        in Product Development.
+      </p>
+      <ul className="cards-list">
+        {cardsList.map(eachCard => (
+          <CardItem cardDetails={eachCard} key={eachCard.id} />
+        ))}
+      </ul>
+    </div>
   </div>
 )
 export default App
