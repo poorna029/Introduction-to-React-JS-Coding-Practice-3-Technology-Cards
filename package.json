@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://poorna029.github.io/Introduction-to-React-JS-Coding-Practice-3-Technology-Cards",
-
   "scripts": {
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist --cache .gh-pages-cache",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
