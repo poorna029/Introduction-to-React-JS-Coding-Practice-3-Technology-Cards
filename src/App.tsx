@@ -94,7 +94,7 @@ function App() {
   const [ind, setIndex]= useState<number>(0);
 
   useEffect(()=>{
-   const intervalId = setInterval(()=>{
+   setInterval(()=>{
     console.log(ind);
       setIndex(pre => {
         if(pre===4){
